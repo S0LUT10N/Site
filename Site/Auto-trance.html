@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Расчет лучшего поставщика</title>
+    <style>
+        body{
+            background-image: url("assets/images/background74.jpg");
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header1__logo">Auto-trance</div>
+
+            <nav class="nav2">
+                <a class="nav2__link" id = "1" href="Главная.html">ABOUT</a>
+                <a class="nav2__link" href="Price Calculation.html">Price Calculation</a>
+                <a class="nav2__link" href="Auto-trance.html">Auto-trance</a>
+                <a class="nav2__link" href="Objects.html">Our objects</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="form">
+    <div class="container">
+        <div class="form__inner"></div>
+        <div class="form content">
+            <div class="form__title-box">
+                <div class="form__title">
+                    Подбор поставщика
+                </div>
+                <div class="form__text">
+                    Комплексный подход к выбору вашего поставщика.
+                </div>
+            </div>
+            <div class="form__box">
+                <form action="Result.html" id = "Auto-trance">
+                    <div class="form__box-inner">
+                        <div class="form__box-left">
+                            <label>
+                                Ответственный (ФИО)
+                                <input type="text", class="form-control", name="FIO" />
+                            </label>
+                            <label>
+                                Грузоподъемность(2-250кг)
+                                <input type="text", class="form-control", name="GruzPod" />
+                            </label>
+                            <label>
+                                Стоимость груза(руб)
+                                <input type="text", class="form-control", name="StoimGruza" />
+                            </label>
+                            <label> Пункт назначения
+                                <select id = "Punct" name="Punct">
+                                    <option value="">--Сделайте выбор--</option>
+                                    <option value="Li">Ли Юэ</option>
+                                    <option value="Mon">Мондштадт</option>
+                                    <option value="Inad">Инадзума</option>
+                                    <option value="Snow">Снежная</option>
+                                </select>
+                            </label>
+                            <input class="button", type="submit", value="Подобрать поставщика" />
+                        </div>
+                    </div>
+                </form>
+                <script src="LocalStorage.js"></script>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

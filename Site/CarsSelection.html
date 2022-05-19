@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Расчет лучшего поставщика</title>
+    <style>
+        body {
+            background-image: url("assets/images/background74.jpg");
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header1__logo">Auto-trance</div>
+
+            <nav class="nav2">
+                <a class="nav2__link" id = "1" href="Главная.html">ABOUT</a>
+                <a class="nav2__link" id = "2" href="Price Calculation.html">Price Calculation</a>
+                <a class="nav2__link" id = "3"  href="CarsSelection.html">Auto-trance</a>
+                <a class="nav2__link" id = "4" href="Objects.html">Our objects</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="form">
+    <div class="container">
+        <div class="form__inner"></div>
+        <div class="form content">
+            <div class="form__title-box">
+                <div class="form__title">
+                    Подбор поставщика
+                </div>
+                <div class="form__text">
+                    Комплексный подход к выбору вашего поставщика.
+                </div>
+            </div>
+            <div class="form">
+                <form id="Auto-trance">
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label"><b>Территория</b></label>
+                        <div class="col-sm-10">
+                            <select id="a" class="form-control" type="text", name = "loc">
+                                <option value="">Выбрать</option>
+                                <option value="tuymazi">Туймазы</option>
+                                <option value="ufa">Уфа</option>
+                                <option value="piter">Санкт-Петербург</option>
+                                <option value="moskou">Москва</option>
+                                <option value="kazan">Казань</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- стоимость -->
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label"><b>Масса</b></label>
+                        <div class="col-sm-10">
+                            <input
+                                    placeholder="Введите массу вашего груза"
+                                    class="form-control"
+                                    id="b"
+                                    name="mass"
+                                    type="text"
+                                    pattern="^[ 0-9]+$"
+                                    required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label"><b>Цена</b></label>
+                        <div class="col-sm-10" required>
+
+                            <input
+                                    placeholder="Введите цену, ниже которой показывать предложения"
+                                    class="form-control"
+                                    id="control"
+                                    name="price"
+                                    type="text"
+                                    pattern="^[ 0-9]+$"
+                                    required
+                            />
+                        </div>
+                    </div>
+
+
+                    <br/>
+                    <input id="submitBtn" type="button" class="btn btn" value="Подобрать автоперевозчика"
+                           onclick="printoutCars();"/>
+
+                    <br/>
+                    <br/>
+                    <div id="output" class="list-group"></div>
+                </form>
+            </div>
+            <script src="LocalStorage.js"></script>
+            <script src="Cars.js"></script>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+
+</html>
